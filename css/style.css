@@ -606,7 +606,7 @@ section#tweets .content.inner {
   display: inline-block;
 }
 .pills li:nth-of-type(2n) {
-  /*margin: 0 8px;*/
+  margin: 0 8px;
 }
 .pills li .button:not(.active) {
   background: none !important;
@@ -642,7 +642,6 @@ section .preview img,
 section .preview video {
   display: block;
   width: 100%;
-  user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
