@@ -341,38 +341,34 @@ section#pricing {
 }
 
 #plans {
-  max-width: 720px;
-  font-size: 0;
+  display: flex; /* Use Flexbox for horizontal layout */
+  justify-content: space-between; /* Space out the blocks evenly */
+  gap: 40px; /* Set the gap between the cards */
   margin: var(--mediumPadding) auto 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px; /* Adds space between the blocks */
+  flex-wrap: wrap; /* Allow wrapping if there’s not enough space */
 }
+
 #plans .plan {
   text-align: left;
-  display: inline-block;
-  vertical-align: middle;
   border-radius: 40px;
   background: #fff;
-}
-#plans .plan .details {
   padding: 40px;
+  width: 100%; /* Ensure it takes the full width of the flex item */
+  flex: 1 1 30%; /* Each plan takes up 30% of the space and grows/shrinks as needed */
 }
+
 #plans .plan.personal {
-  width: 100%; /* Make the plan take full width within the grid item */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 24px 40px rgba(0, 0, 0, 0.12);
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
 }
+
 #plans .plan.enterprise {
-  width: 45%;
   background: rgba(255, 255, 255, 0.8);
-  /* background: var(--gray); */
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 #plans .plan h4 {
   font-weight: 700;
   font-size: 18px;
@@ -382,9 +378,11 @@ section#pricing {
   align-items: center;
   gap: 8px;
 }
+
 #plans .plan.enterprise h4 {
   color: var(--black);
 }
+
 #plans .plan h5 {
   font-weight: 700;
   font-size: 16px;
@@ -397,9 +395,11 @@ section#pricing {
   border-radius: 12px;
   margin-top: 12px;
 }
+
 #plans .plan h5 strong {
   font-weight: 900;
 }
+
 #plans .plan h3 {
   font-weight: 900;
   font-size: 36px;
@@ -407,14 +407,17 @@ section#pricing {
   color: var(--black);
   margin-top: 24px;
 }
+
 #plans .plan h3 strong {
   font-weight: 900;
 }
+
 #plans .plan h3 span {
   text-decoration: line-through;
   opacity: 0.32;
   font-weight: 700;
 }
+
 #plans .plan h3 sub {
   font-size: 18px;
   line-height: 24px;
@@ -422,6 +425,7 @@ section#pricing {
   display: inline-block;
   padding: 0 0 4px 6px;
 }
+
 #plans .plan p {
   font-size: 18px;
   line-height: 24px;
@@ -430,6 +434,7 @@ section#pricing {
   font-weight: 600;
   margin-top: 8px;
 }
+
 #plans .plan ul li:before {
   content: "";
   display: inline-block;
@@ -439,9 +444,11 @@ section#pricing {
   margin-right: 12px;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.0607 7.06066C21.6464 6.47487 21.6464 5.52513 21.0607 4.93934C20.4749 4.35355 19.5251 4.35355 18.9393 4.93934L21.0607 7.06066ZM9 17L7.93934 18.0607C8.52513 18.6464 9.47487 18.6464 10.0607 18.0607L9 17ZM5.06066 10.9393C4.47487 10.3536 3.52513 10.3536 2.93934 10.9393C2.35355 11.5251 2.35355 12.4749 2.93934 13.0607L5.06066 10.9393ZM18.9393 4.93934L7.93934 15.9393L10.0607 18.0607L21.0607 7.06066L18.9393 4.93934ZM10.0607 15.9393L5.06066 10.9393L2.93934 13.0607L7.93934 18.0607L10.0607 15.9393Z' fill='%237B61FF'/%3E%3C/svg%3E%0A");
 }
+
 #plans .plan.enterprise ul li:before {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.0607 7.06066C21.6464 6.47487 21.6464 5.52513 21.0607 4.93934C20.4749 4.35355 19.5251 4.35355 18.9393 4.93934L21.0607 7.06066ZM9 17L7.93934 18.0607C8.52513 18.6464 9.47487 18.6464 10.0607 18.0607L9 17ZM5.06066 10.9393C4.47487 10.3536 3.52513 10.3536 2.93934 10.9393C2.35355 11.5251 2.35355 12.4749 2.93934 13.0607L5.06066 10.9393ZM18.9393 4.93934L7.93934 15.9393L10.0607 18.0607L21.0607 7.06066L18.9393 4.93934ZM10.0607 15.9393L5.06066 10.9393L2.93934 13.0607L7.93934 18.0607L10.0607 15.9393Z' fill='%23333333'/%3E%3C/svg%3E%0A");
 }
+
 #plans .plan ul li {
   display: block;
   font-weight: 700;
@@ -450,22 +457,27 @@ section#pricing {
   color: var(--black);
   margin-bottom: 24px;
 }
+
 #plans .plan ul li:last-of-type {
   margin-bottom: 0;
 }
+
 #plans .plan .btn {
   padding: 0 24px 24px;
 }
+
 #plans .plan .button {
   display: block;
   text-align: center;
   width: 100%;
 }
+
 #plans .plan .button.secondary {
   background: none;
   color: var(--purple);
   margin-top: 12px;
 }
+
 #plans .plan.enterprise .button.secondary {
   color: var(--black);
 }
@@ -473,18 +485,22 @@ section#pricing {
 .teams {
   margin-top: var(--mediumPadding);
 }
+
 .teams p.desc {
   margin-bottom: var(--smallPadding);
 }
+
 #logos {
   max-width: 600px;
   margin: 0 auto;
 }
+
 #logos li {
   display: inline-block;
   margin: 12px 20px;
   vertical-align: middle;
 }
+
 
 
 section#tweets {
