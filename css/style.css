@@ -342,7 +342,7 @@ section#pricing {
 
 #plans {
   display: flex;
-  flex-direction: column; /* Ensure it stays vertical */
+  flex-direction: row; /* Ensure it stays vertical */
   justify-content: space-around;
   margin: var(--mediumPadding) auto 0;
 }
