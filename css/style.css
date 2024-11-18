@@ -343,8 +343,8 @@ section#pricing {
 #plans {
   display: flex; /* Use flexbox to align children horizontally */
   flex-wrap: wrap; /* Allow the divs to wrap to the next line if necessary */
-  justify-content: space-between; /* Adjust the space between plans */
-  font-size: 0;
+  justify-content: space-around; /* Adjust the space between plans */
+  gap: 20px; /* Add space between rows and columns */
   margin: var(--mediumPadding) auto 0;
 }
 
@@ -354,7 +354,8 @@ section#pricing {
   vertical-align: middle;
   border-radius: 40px;
   background: #fff;
-  width: 48%; /* Adjust width as per your need to fit multiple divs */
+  width: calc(50% - 20px); /* Adjust width to fit two items per row */
+  box-sizing: border-box; /* Ensure padding/borders don’t exceed width */
   margin-bottom: 20px; /* Space between rows */
 }
 
