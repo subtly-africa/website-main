@@ -78,7 +78,7 @@ a {
 }
 
 .inner {
-  width: 960px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -212,7 +212,7 @@ section {
   overflow: hidden;
 }
 section .content.inner {
-  width: 720px;
+  width: 60%;
   padding: var(--largePadding) 0;
   text-align: center;
 }
