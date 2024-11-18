@@ -341,22 +341,20 @@ section#pricing {
 }
 
 #plans {
-  display: flex; /* Use flexbox to align children horizontally */
-  flex-wrap: wrap; /* Allow the divs to wrap to the next line if necessary */
-  justify-content: space-around; /* Adjust the space between plans */
-  gap: 20px; /* Add space between rows and columns */
+  display: flex;
+  flex-direction: column; /* Ensure it stays vertical */
+  justify-content: space-around;
   margin: var(--mediumPadding) auto 0;
 }
 
 #plans .plan {
   text-align: left;
-  display: inline-block; /* Keep as inline-block or remove for flex behavior */
+  display: inline-block;
   vertical-align: middle;
   border-radius: 40px;
   background: #fff;
-  width: calc(50% - 20px); /* Adjust width to fit two items per row */
-  box-sizing: border-box; /* Ensure padding/borders don’t exceed width */
-  margin-bottom: 20px; /* Space between rows */
+  width: 100%; /* Full width to keep them in a single column */
+  margin-bottom: 40px; /* Increased distance between blocks */
 }
 
 #plans .plan .details {
