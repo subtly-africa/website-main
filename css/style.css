@@ -344,6 +344,9 @@ section#pricing {
   max-width: 720px;
   font-size: 0;
   margin: var(--mediumPadding) auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; /* Adds space between the blocks */
 }
 #plans .plan {
   text-align: left;
@@ -356,10 +359,12 @@ section#pricing {
   padding: 40px;
 }
 #plans .plan.personal {
-  width: 55%;
+  width: 100%; /* Make the plan take full width within the grid item */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 24px 40px rgba(0, 0, 0, 0.12);
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 #plans .plan.enterprise {
   width: 45%;
